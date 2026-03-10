@@ -13,11 +13,11 @@ public class HiloCliente extends Thread {
         try {
             BufferedReader entrada = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             String mensaje = entrada.readLine();
-            System.out.println("Cliente dice: " + mensaje);
+            System.out.println("El Cliente ha dicho: " + mensaje);
 
             // Salida de datos
             PrintWriter salida = new PrintWriter(socket.getOutputStream(), true);
-            salida.println("Hola desde el servidor");
+            salida.println("Hola Cliente! Soy el Servidor!");
 
             socket.close();
         } catch (IOException e) {

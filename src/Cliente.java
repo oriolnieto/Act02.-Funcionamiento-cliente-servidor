@@ -7,7 +7,7 @@ public static void main(String[] args) {
             Socket socket = new Socket("127.0.0.1", 5000);
             // Salida de datos
             PrintWriter salida = new PrintWriter(socket.getOutputStream(), true);
-            salida.println("Hola servidor");
+            salida.println("Hola Servidor!");
 
             // Entrada de datos
             BufferedReader entrada = new BufferedReader(new InputStreamReader(socket.getInputStream()));
